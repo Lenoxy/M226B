@@ -1,9 +1,15 @@
-public class Politiker{
+public class Politiker extends Parteimitglied implements Lohn{
     private double lohn;
     private String rat = null;
 
-    public Politiker(){
+    public Politiker(String vorname, String name){
+        super(vorname, name);
+    }
 
+    public Politiker(String vorname, String name, double lohn, String rat, String partei){
+        super(vorname, name, partei);
+        this.lohn = lohn;
+        this.rat = rat;
     }
 
     public void Datenausgabe(){
